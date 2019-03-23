@@ -10,10 +10,10 @@ local function loadPreset(presetNumber, event)
         player.zoom = zoomLevel
     elseif viewType == choices.view_option.zoomToWorldView then
         player.close_map() -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
-        player.zoom_to_world({ 0, 0 }, zoomLevel)
+        player.zoom_to_world(player.position, zoomLevel)
     elseif viewType == choices.view_option.mapView then
         player.close_map() -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
-        player.open_map({ 0, 0 }, zoomLevel)
+        player.open_map(player.position, zoomLevel)
     end
 end
 
