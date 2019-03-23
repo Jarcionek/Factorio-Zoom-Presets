@@ -1,0 +1,10 @@
+{
+  "name": "ZoomPresets",
+  "version": "1.0.0",
+  "factorio_version": "0.17",
+  "title": "Zoom Presets",
+  "author": "Jarcionek",
+  "description": "Four configurable keys to set desired zoom level. Allows to zoom out farther than the base game. Also works in the map's \"world view'.",
+  "homepage": "https://github.com/Jarcionek/Factorio-Zoom-Presets",
+  "dependencies": ["base"]
+}
