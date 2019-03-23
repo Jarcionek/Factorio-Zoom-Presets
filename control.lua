@@ -24,3 +24,11 @@ end)
 script.on_event("ZoomPresets_key-2", function(event)
     loadPreset(2, event)
 end)
+
+script.on_event("ZoomPresets_key-3", function(event)
+    loadPreset(3, event)
+end)
+
+script.on_event("ZoomPresets_key-4", function(event)
+    loadPreset(4, event)
+end)
