@@ -3,6 +3,7 @@ mkdir ZoomPresets_1.0.0
 cp info.json ZoomPresets_1.0.0
 cp README.md ZoomPresets_1.0.0
 cp LICENSE ZoomPresets_1.0.0
+cp changelog.txt ZoomPresets_1.0.0
 cp thumbnail.png ZoomPresets_1.0.0
 cp *.lua ZoomPresets_1.0.0
 cp -R locale ZoomPresets_1.0.0
