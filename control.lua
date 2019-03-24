@@ -14,12 +14,36 @@ local function loadPreset(presetNumber, event)
     if viewType == choices.view_option.player then
         closeMapIfOpen(player)
         player.zoom = zoomLevel
+
     elseif viewType == choices.view_option.zoomToWorldView then
+        local position = player.position
+
+        -- while in player view or zoomToWorldView, zoom while centering on what player is pointing at
+        if player.selected ~= nil then
+            position = player.selected.position
+        else
+            -- if already is the zoomToWorldView (and the player is not pointing at anything) just change the zoom level
+            if player.render_mode == defines.render_mode.chart_zoomed_in then
+                player.zoom = zoomLevel
+                do
+                    return
+                end
+            end
+        end
+
         closeMapIfOpen(player) -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
-        player.zoom_to_world(player.position, zoomLevel)
+        player.zoom_to_world(position, zoomLevel)
+
     elseif viewType == choices.view_option.mapView then
+        local position = player.position
+
+        -- if in player view or zoomToWorldView, zoom while centering on what player is pointing at
+        if player.selected ~= nil then
+            position = player.selected.position
+        end
+
         closeMapIfOpen(player) -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
-        player.open_map(player.position, zoomLevel)
+        player.open_map(position, zoomLevel)
     end
 end
 
