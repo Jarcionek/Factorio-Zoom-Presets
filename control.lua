@@ -1,18 +1,12 @@
 local choices = require("choices")
 
-local function closeMapIfOpen(player)
-    if player.render_mode ~= defines.render_mode.game then -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
-        player.close_map()
-    end
-end
-
 local function loadPreset(presetNumber, event)
     local player = game.players[event.player_index]
     local viewType = player.mod_settings["ZoomPresets_preset-" .. presetNumber .. "-view-type"].value
     local zoomLevel = player.mod_settings["ZoomPresets_preset-" .. presetNumber .. "-zoom-level"].value
 
     if viewType == choices.view_option.player then
-        closeMapIfOpen(player)
+        player.close_map()
         player.zoom = zoomLevel
 
     elseif viewType == choices.view_option.zoomToWorldView then
@@ -31,8 +25,8 @@ local function loadPreset(presetNumber, event)
             end
         end
 
-        closeMapIfOpen(player) -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
         player.zoom_to_world(position, zoomLevel)
+        player.zoom = zoomLevel -- workaround for https://forums.factorio.com/viewtopic.php?f=7&t=68730
 
     elseif viewType == choices.view_option.mapView then
         local position = player.position
@@ -42,7 +36,6 @@ local function loadPreset(presetNumber, event)
             position = player.selected.position
         end
 
-        closeMapIfOpen(player) -- workaround for occasional crash (https://forums.factorio.com/viewtopic.php?f=7&t=68327)
         player.open_map(position, zoomLevel)
     end
 end
