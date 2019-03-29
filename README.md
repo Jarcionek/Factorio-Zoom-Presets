@@ -8,7 +8,7 @@ Four configurable keys to set desired zoom level and view type. Allows to zoom o
 
 # Configuration
 
-![Mod Settings](/settings.png)
+![Mod Settings](https://raw.githubusercontent.com/Jarcionek/Factorio-Zoom-Presets/master/settings.png)
 
 For each of the four presets, you can configure the following properties:
 
