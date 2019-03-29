@@ -1,8 +1,10 @@
 # Factorio-Zoom-Presets
-Factorio mod to quickly change zoom level to the desired values
+
+Factorio mod to quickly change zoom level to the desired values.
 
 
 # Description
+
 Four configurable keys to set desired zoom level and view type. Allows to zoom out farther than in the base game. With a single key press you can open a map maximally zoomed out. With another key press you can see a large world area around you. No more scrolling with your mouse wheel!
 
 
