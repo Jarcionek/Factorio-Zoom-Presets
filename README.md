@@ -18,9 +18,10 @@ For each of the four presets, you can configure the following properties:
 
 Defines how much (or how little) you can see. Decrease it to zoom out. Be careful with values lower than 0.1 as it might cause performance problems.
 To give you an idea of what the numbers mean, these are the values defined by the base game:
+
 * 3 - maximum zoom in (whether on map or not)
 * 1 - that's the zoom level that you start with when you load a game
-* 0.275 - maximum player zoom out; while on the map, this is the zoom-to-world threshold
+* 0.4 - maximum player zoom out; while on the map, this is the zoom-to-world threshold
 * 0.0035 - maximum zoom out on the map
 
 ## View type (in Settings / Mod Settings)
