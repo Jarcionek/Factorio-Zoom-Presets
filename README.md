@@ -27,6 +27,7 @@ To give you an idea of what the numbers mean, these are the values defined by th
 ## View type (in Settings / Mod Settings)
 
 Defines whether the to open (and in which mod) or close a map:
+
 * Player = map closed
 * Zoom to World View = map open in world view where interacting with entities is possible
 * Map View = map open in the pixelated view (like where you don't have radar coverage)
@@ -45,9 +46,11 @@ Default bindings are CTRL + 1, CTRL + 2, CTRL + 3, CTRL + 4 which you can change
 # Changelog
 
 ### 1.0.1 (29/03/2019)
+
 * Removed workarounds for fixed bugs.
 * Added workarounds for bugs introduced in 0.17.22.
 * As a result, version 0.17.22 is now required.
 
 ### 1.0.0 (24/03/2019)
+
 * Initial release.
